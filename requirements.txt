@@ -1,0 +1,5 @@
+emoji==1.7
+recognizers-text-suite
+openai
+accelerate
+transformers
