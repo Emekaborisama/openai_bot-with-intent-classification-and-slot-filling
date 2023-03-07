@@ -6,10 +6,9 @@ from recognizers_suite import Culture, ModelResult
 # Use English for the Recognizers culture
 culture = Culture.English
 
-async def extract_slots(input_value):
+def extract_slots(input_value):
   """
   extract important info using microsoft recognizer.
-   
   """
   slot = {}
   try:

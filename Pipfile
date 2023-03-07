@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+emoji = "==1.7"
+recognizers-text-suite = "*"
+openai = "*"
+accelerate = "*"
+transformers = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"

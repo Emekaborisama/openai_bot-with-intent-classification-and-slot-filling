@@ -5,8 +5,16 @@ app = Flask(__name__)
 
 
 
+    
+    
+
 @app.route("/home")
 def index():
+  return("welcome to app")
+
+
+@app.route("/conversation_bot")
+def bot_app():
   return("welcome to app")
 
 
