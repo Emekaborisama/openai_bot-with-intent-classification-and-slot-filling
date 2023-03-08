@@ -6,3 +6,4 @@ transformers
 fastapi
 redis
 fastapi_server_session
+spacy

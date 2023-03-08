@@ -34,9 +34,7 @@ session_manager = SessionManager(
 )
 
 
-async def set_session(session: Session = Depends(session_manager.use_session)):
-    session["chatlog"] = "value"
-    return {"status": "ok"}
+
 
 
 async def get_session(session: Session = Depends(session_manager.use_session)):
@@ -47,6 +45,7 @@ async def get_session(session: Session = Depends(session_manager.use_session)):
 
 @app.post("/conversation_bot")
 async def  generate(message: Message,session: Session = Depends(session_manager.use_session)):
+    """ get message, run the get_response function, store the current question and answer on redis and use them for the next request. this create a unique session for every user"""
     Message.output =get_response(message.input, chat_log=session["chatlog"], model=model)
     result_res = Message.output
     result_chatlog = append_to_chat_log(chat_log=session["chatlog"],question=message.input, answer=result_res['Chatbot'])
