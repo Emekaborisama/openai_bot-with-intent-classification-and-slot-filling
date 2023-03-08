@@ -3,3 +3,6 @@ recognizers-text-suite
 openai
 accelerate
 transformers
+fastapi
+redis
+fastapi_server_session

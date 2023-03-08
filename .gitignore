@@ -1,0 +1,3 @@
+*app/intent_classifier/
+*/app/__pycache__
+*__pycache__

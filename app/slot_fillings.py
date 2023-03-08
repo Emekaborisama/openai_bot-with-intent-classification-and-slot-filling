@@ -1,14 +1,11 @@
 import recognizers_suite as Recognizers
 from recognizers_suite import Culture, ModelResult
-
-
-
 # Use English for the Recognizers culture
 culture = Culture.English
 
 def extract_slots(input_value):
   """
-  extract important info using microsoft recognizer.
+  extract important info using microsoft recognizer and set triggers or event
   """
   slot = {}
   try:
@@ -38,6 +35,5 @@ def extract_slots(input_value):
     pass
   # return slot
   return slot 
-
 
 

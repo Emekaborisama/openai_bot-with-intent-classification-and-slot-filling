@@ -3,6 +3,6 @@ RUN mkdir /app
 WORKDIR /app 
 ADD . /app/ 
 RUN pip install -r requirements.txt 
-RUN app/load_model.py
-CMD ["python", "app.py"]
+RUN ["python app/load_intent_model.py"]
+CMD ["uvicorn" "main:app" "--reload"]
 EXPOSE 8000
